@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Démarrer IAssistant",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "iassistant"
+            ],
+            "options": {
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}/src"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lancer IAssistant",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "iassistant",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        }
+    ]
+}
