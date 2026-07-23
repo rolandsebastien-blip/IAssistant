@@ -1,0 +1,132 @@
+# Chapitre 4 – Le chef d'orchestre et son premier spécialiste
+
+> *« Un architecte ne réalise pas tous les métiers. Il coordonne les spécialistes et prend les décisions qui permettront au projet d'avancer. »*
+
+## Le tournant du projet
+
+Jusqu'à présent, IAssistant était capable de démarrer.
+
+Son rôle se limitait à afficher un message de bienvenue avant de poursuivre son exécution.
+
+Cette approche fonctionnait techniquement, mais elle ne correspondait pas à la vision du projet.
+
+Au cours de cette séance, une question simple est apparue :
+
+**Quel est réellement le rôle d'IAssistant ?**
+
+La réponse est rapidement devenue évidente.
+
+IAssistant n'est pas un spécialiste.
+
+Il est l'architecte du projet.
+
+Son rôle n'est pas de réaliser lui-même chaque tâche, mais de décider quel spécialiste doit intervenir au bon moment.
+
+Cette idée deviendra l'un des fondements de toute l'architecture du logiciel.
+
+---
+
+## Une analogie naturelle
+
+L'architecture d'IAssistant s'inspire directement du métier d'architecte.
+
+L'architecte ne calcule pas lui-même une charpente, ne réalise pas une étude de stabilité et ne dessine pas les réseaux électriques.
+
+Il fait appel aux bons spécialistes.
+
+Chaque spécialiste accomplit sa mission.
+
+Il remet ensuite son travail à l'architecte.
+
+L'architecte analyse les résultats et décide de la suite du projet.
+
+IAssistant adopte exactement ce fonctionnement.
+
+---
+
+## Les spécialistes
+
+Cette séance voit apparaître le premier spécialiste du projet :
+
+**PremiereRencontre**
+
+Sa mission est volontairement très limitée :
+
+- se présenter ;
+- expliquer qui est IAssistant ;
+- créer un premier contact avec l'utilisateur.
+
+Il ne cherche pas encore à comprendre la maison.
+
+Il ne collecte aucune information.
+
+Il ne réalise aucune analyse.
+
+Sa responsabilité est unique.
+
+Cette simplicité est volontaire.
+
+Elle garantit que chaque spécialiste restera indépendant et parfaitement identifiable.
+
+---
+
+## Une nouvelle organisation
+
+Afin de préparer l'arrivée des futurs spécialistes, un nouveau dossier apparaît :
+
+```
+specialists/
+```
+
+Chaque spécialiste disposera désormais de son propre fichier.
+
+Cette organisation permet de conserver des fichiers courts, lisibles et centrés sur une seule responsabilité.
+
+---
+
+## Le rôle d'IAssistant évolue
+
+L'application ne lance plus directement une succession d'actions.
+
+Elle devient progressivement un chef d'orchestre.
+
+Son rôle est désormais de :
+
+- démarrer ;
+- déterminer la prochaine mission ;
+- appeler le spécialiste concerné ;
+- récupérer la main une fois la mission terminée.
+
+Même si la logique reste aujourd'hui très simple, cette organisation prépare l'ensemble des évolutions futures.
+
+---
+
+## Une découverte importante
+
+Au cours de cette réflexion, une distinction essentielle apparaît.
+
+Les spécialistes ne communiquent jamais directement entre eux.
+
+Ils travaillent uniquement pour IAssistant.
+
+Ils exécutent leur mission.
+
+Puis rendent la main.
+
+C'est IAssistant qui décide de la prochaine étape.
+
+Cette règle permettra de conserver une architecture souple et évolutive pendant toute la vie du projet.
+
+---
+
+## Ce que nous retenons
+
+Cette séance marque une évolution majeure.
+
+IAssistant cesse progressivement d'être un simple programme.
+
+Il devient un véritable coordinateur capable de déléguer son travail à des spécialistes indépendants.
+
+Le premier maillon de cette architecture est désormais en place.
+
+Les prochains chapitres pourront enrichir cette équipe de spécialistes sans jamais remettre en cause son fonctionnement général.
